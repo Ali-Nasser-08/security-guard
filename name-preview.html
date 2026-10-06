@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="معاينة مولّد الأسماء لتدريب مطابقة الهويات وتصاريح الدخول — شركة طويق للخدمات الأمنية">
+  <title>معاينة الأسماء | تدريب طويق</title>
+  <script>
+    try { const theme = localStorage.getItem('tuwaiq-theme'); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; } catch {}
+  </script>
+  <style>
+    @font-face{font-family:Plex;src:url('./font/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+    @font-face{font-family:Plex;src:url('./font/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Medium.ttf') format('truetype');font-weight:500 700;font-display:swap}
+    :root{color-scheme:light;--bg:#fff;--surface:#f7f8f6;--text:#202820;--muted:#687067;--line:#e4e8e1;--green:#81b866;--green-ink:#385a27;--green-soft:#eff6ea;--orange:#f3a736;--orange-soft:#fff5e3;--orange-ink:#855000;--focus:#527e3d}
+    @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#141814;--surface:#1b211b;--text:#edf2e9;--muted:#a7b2a2;--line:#333d31;--green-ink:#aad78f;--green-soft:#24321e;--orange-soft:#332819;--orange-ink:#f3ba66;--focus:#a3d889}}
+    :root[data-theme="dark"]{color-scheme:dark;--bg:#141814;--surface:#1b211b;--text:#edf2e9;--muted:#a7b2a2;--line:#333d31;--green-ink:#aad78f;--green-soft:#24321e;--orange-soft:#332819;--orange-ink:#f3ba66;--focus:#a3d889}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.8 Plex,Arial,sans-serif}button,input,select{font:inherit}button,select{cursor:pointer}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:4px}button{color:inherit}h1,h2,h3,p{margin:0}h1,h2,h3,strong{font-weight:500}h1{font-size:clamp(28px,5vw,40px);line-height:1.6;letter-spacing:-.5px}h2{font-size:21px}a{color:var(--green-ink)}svg{width:21px;height:21px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.number{font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+    .skip{position:fixed;top:-100px;right:20px;background:var(--bg);padding:10px;z-index:10}.skip:focus{top:10px}.wrap{max-width:1160px;margin:auto;padding-inline:32px}.header{border-bottom:1px solid var(--line)}.header-inner{min-height:100px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;gap:14px;align-items:center}.brand-mark{display:grid;place-items:center;width:44px;height:48px;background:var(--green-soft);color:var(--green-ink);border-radius:13px}.brand-mark svg{width:29px;height:29px}.brand-name{font-size:20px;font-weight:500}.brand-caption{font-size:12px;color:var(--muted)}.header-actions{display:flex;gap:8px}.icon-button{width:44px;height:44px;border:1px solid var(--line);background:var(--bg);border-radius:50%;display:grid;place-items:center;text-decoration:none}.icon-button:hover{background:var(--surface)}.hero{padding-top:46px;padding-bottom:30px;max-width:780px}.eyebrow{display:flex;align-items:center;gap:9px;color:var(--green-ink);font-size:13px;font-weight:500;margin-bottom:10px}.dot{width:7px;height:7px;border-radius:50%;background:var(--green)}.intro{color:var(--muted);max-width:680px;margin-top:12px}.stage{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:100px;padding:3px 12px;color:var(--muted);font-size:12px;margin-top:20px}
+    .sample{border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:32px}.sample-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 24px;background:var(--surface);border-bottom:1px solid var(--line)}.sample-head h2{font-size:16px}.quiet-button{background:transparent;border:0;padding:6px 0;color:var(--green-ink);font-size:14px;display:flex;align-items:center;gap:8px;min-height:40px}.sample-body{display:grid;grid-template-columns:1.15fr 1fr;gap:24px;padding:26px 24px}.sample-name{font-size:clamp(20px,3vw,25px);line-height:1.9;margin-top:6px;overflow-wrap:anywhere}.field-label{font-size:12px;color:var(--muted)}.parts{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.part{border:1px solid var(--line);border-radius:9px;padding:6px 11px;font-size:14px}.part small{display:block;font-size:10px;color:var(--muted)}.sample-ledger{border-inline-start:1px solid var(--line);padding-inline-start:24px;display:flex;flex-direction:column;justify-content:center}.sample-note{font-size:12px;color:var(--muted);margin-top:10px}.sample-note strong{color:var(--green-ink)}
+    .section-title{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px}.section-title p{font-size:13px;color:var(--muted)}.controls{display:flex;align-items:flex-end;flex-wrap:wrap;gap:14px;padding:20px;border:1px solid var(--line);border-radius:14px;margin-bottom:16px}.control{display:flex;flex-direction:column;gap:5px;flex:1;min-width:150px}.control label{font-size:12px;color:var(--muted)}input,select{width:100%;min-height:46px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;color:var(--text);background:var(--bg)}input[type="number"]{text-align:right}.primary{display:flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:9px 24px;border:0;border-radius:8px;background:var(--green);color:#172610;font-weight:500}.primary:hover{filter:brightness(.96)}.stats{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-bottom:16px}.stats strong{color:var(--text)}.status{margin-inline-start:auto;color:var(--green-ink)}.notice{background:var(--orange-soft);border-radius:8px;padding:10px 14px;color:var(--orange-ink);font-size:12px;margin-bottom:16px}.table-wrap{border:1px solid var(--line);border-radius:14px;overflow:hidden}table{width:100%;border-collapse:collapse;text-align:right;table-layout:fixed}thead{background:var(--surface);color:var(--muted);font-size:12px}th{font-weight:400;padding:13px 18px}td{padding:17px 18px;border-top:1px solid var(--line);font-size:14px;vertical-align:top;overflow-wrap:anywhere}th:first-child{width:58px}th:last-child{width:75px}tbody tr:hover{background:var(--surface)}.row-number{color:var(--muted);font-size:12px}.base-name{color:var(--muted);font-size:13px}.ledger-name{font-weight:500}.gender{font-size:11px;color:var(--muted);display:inline-block;background:var(--surface);border-radius:6px;padding:2px 7px}.gender.female{color:var(--orange-ink);background:var(--orange-soft)}.connector{color:var(--green-ink)}.mobile-label{display:none}.empty{padding:28px;text-align:center;color:var(--muted)}.table-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 2px;color:var(--muted);font-size:12px}.text-button{background:none;border:0;color:var(--green-ink);padding:6px 0;min-height:40px;font-size:13px}
+    .details{border-top:1px solid var(--line);padding:24px 0;margin-top:20px}summary{cursor:pointer;font-size:15px;font-weight:500;min-height:44px}.details-body{padding-top:12px}.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.rule{font-size:13px;color:var(--muted)}.rule strong{display:block;color:var(--text);font-size:14px;margin-bottom:5px}.pool-meta{font-size:12px;color:var(--muted);margin-top:20px}.dictionary{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.dictionary span{font-size:12px;border:1px solid var(--line);border-radius:6px;padding:2px 8px}.dictionary-tabs{display:flex;flex-wrap:wrap;gap:8px}.dictionary-tabs button{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 13px;min-height:40px;font-size:12px}.dictionary-tabs button[aria-pressed="true"]{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}.variants-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.variants-list p{font-size:13px;padding:9px 12px;border:1px solid var(--line);border-radius:8px}.variant-help{font-size:12px;color:var(--muted);margin-top:6px}.footer{margin-top:30px;border-top:1px solid var(--line);padding-block:24px}.footer-inner{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:12px}.footer strong{color:var(--text)}dialog{border:1px solid var(--line);border-radius:18px;background:var(--bg);color:var(--text);padding:28px;width:calc(100% - 32px);max-width:460px}dialog::backdrop{background:#0007}dialog h2{margin-bottom:14px}dialog p{color:var(--muted);font-size:14px;margin-bottom:14px}dialog .primary{width:100%;margin-top:20px}.credit-name{font-size:22px;color:var(--text);font-weight:500;display:block}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:760px){.wrap{padding-inline:20px}.header-inner{min-height:83px}.brand-name{font-size:17px}.brand-caption{font-size:10px}.brand-mark{width:38px;height:42px}.hero{padding-top:30px}.sample-body{grid-template-columns:1fr;gap:22px;padding:20px}.sample-head{padding:12px 20px}.sample-ledger{border-inline-start:0;border-top:1px solid var(--line);padding-inline-start:0;padding-top:18px}.controls{padding:16px;gap:12px}.control{min-width:calc(50% - 12px)}.control:first-child{flex-basis:100%}.controls .primary{width:100%}.section-title{align-items:flex-start;flex-direction:column;gap:2px}.stats{gap:14px}.status{margin-inline-start:0;width:100%}.notice{line-height:1.9}table,tbody{display:block}thead{display:none}tr{display:grid;grid-template-columns:1fr auto;padding:16px 18px;border-top:1px solid var(--line);gap:8px 12px}tr:first-child{border-top:0}td{display:block;padding:0;border:0;font-size:15px}.row-number{display:none}.id-cell{grid-column:1;grid-row:1}.base-cell{grid-column:1/-1;grid-row:3;font-size:12px}.ledger-cell{grid-column:1/-1;grid-row:2}.gender-cell{grid-column:2;grid-row:1}.mobile-label{display:block;font-size:10px;color:var(--muted);font-weight:400;margin-bottom:2px}.base-cell .mobile-label{display:inline;margin-inline-end:8px}.rules{grid-template-columns:1fr;gap:18px}.variants-list{grid-template-columns:1fr}.footer-inner{flex-direction:column;gap:4px}.table-foot{align-items:flex-start}.brand{gap:10px}.header-actions{gap:6px}.icon-button{width:40px;height:40px}}
+    @media(prefers-reduced-motion:no-preference){button,a{transition:background-color .15s ease}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">انتقل إلى المحتوى</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3 27 7v9c0 6-5 10-11 13C10 26 5 22 5 16V7Z"/><path d="m10 16 4 4 8-9"/></svg></span>
+        <div><div class="brand-name">تدريب طويق</div><div class="brand-caption">شركة طويق للخدمات الأمنية</div></div>
+      </div>
+      <div class="header-actions">
+        <button class="icon-button" id="theme-button" aria-label="تفعيل الوضع الداكن" title="تغيير المظهر"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 13.2A9 9 0 0 1 10.8 3.3a9 9 0 1 0 9.9 9.9Z"/></svg></button>
+        <button class="icon-button" id="about-button" aria-label="عن الأداة وصانعها" title="عن الأداة"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.1"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <main class="wrap" id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="dot" aria-hidden="true"></span>الخطوة الأولى · مراجعة الأسماء</div>
+      <h1 id="page-title">أسماء واقعية. تدريب أقرب للواقع.</h1>
+      <p class="intro">راجع طريقة تكوين الأسماء قبل بدء تدريب مطابقة الهويات. لكل شخص اسم رباعي ثابت، وصيغة للهوية، واسم مختصر في كشف تصاريح الدخول.</p>
+      <span class="stage">معاينة للمراجعة والاعتماد</span>
+    </section>
+    <section class="sample" aria-labelledby="sample-title">
+      <div class="sample-head"><h2 id="sample-title">شخص واحد، طريقتان لعرض اسمه</h2><button class="quiet-button" id="sample-button">مثال آخر <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5"/></svg></button></div>
+      <div class="sample-body">
+        <div><p class="field-label">الاسم على الهوية</p><p class="sample-name" id="sample-id"></p><div class="parts" id="sample-parts"></div></div>
+        <div class="sample-ledger"><p class="field-label">الاسم في كشف تصاريح الدخول</p><p class="sample-name" id="sample-ledger"></p><p class="sample-note"><strong>الشخص نفسه.</strong> يُحذف اسم الجد وكلمات النسب من الكشف.</p></div>
+      </div>
+    </section>
+    <section aria-labelledby="names-title">
+      <div class="section-title"><h2 id="names-title">معاينة الأسماء المولّدة</h2><p>فرصة التوليد: <bdi class="number">95%</bdi> رجال · <bdi class="number">5%</bdi> نساء</p></div>
+      <form class="controls" id="generate-form">
+        <div class="control"><label for="name-search">ابحث في الأسماء المعروضة</label><input id="name-search" type="search" placeholder="مثلاً: سامي أو الغامدي" autocomplete="off"></div>
+        <div class="control"><label for="batch-size">عدد الأسماء</label><select id="batch-size"><option value="50">50 اسماً</option><option value="100" selected>100 اسم</option><option value="250">250 اسماً</option><option value="500">500 اسم</option></select></div>
+        <div class="control"><label for="gender-filter">عرض</label><select id="gender-filter"><option value="all">جميع الأسماء</option><option value="male">الرجال فقط</option><option value="female">النساء فقط</option></select></div>
+        <button type="submit" class="primary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5"/></svg>توليد أسماء جديدة</button>
+      </form>
+      <div class="stats" id="batch-stats"></div>
+      <p class="notice">النسبة احتمالية لكل شخص؛ قد يزيد عدد النساء أو يقل في الدفعة الواحدة. اختيار «النساء فقط» يرشّح الدفعة الحالية ولا يغيّر نسبة التوليد.</p>
+      <p class="pool-meta" id="regional-probabilities" style="margin:0 0 16px"></p>
+      <div class="table-wrap"><table aria-label="الأسماء الرباعية وصيغ الهوية والأسماء المختصرة في الكشف"><thead><tr><th scope="col">#</th><th scope="col">الاسم الرباعي الأساسي</th><th scope="col">الاسم على الهوية</th><th scope="col">الاسم في الكشف</th><th scope="col">الجنس</th></tr></thead><tbody id="names-body"></tbody></table><p class="empty" id="empty-message" hidden>لا توجد أسماء مطابقة. جرّب بحثاً آخر أو ولّد دفعة جديدة.</p></div>
+      <div class="table-foot"><span id="visible-count"></span><button class="text-button" id="download-button">تنزيل الدفعة للمراجعة</button></div>
+    </section>
+    <details class="details">
+      <summary>كيف تتكوّن الأسماء؟</summary>
+      <div class="details-body"><div class="rules"><p class="rule"><strong>أربعة أجزاء محفوظة</strong>الاسم الأول، ثم اسم الأب، ثم اسم الجد، ثم العائلة. أسماء الأب والجد دائماً من قائمة الرجال. الاسم المركب مثل «عبد الرحمن» يُعامل كاسم واحد.</p><p class="rule"><strong>من دون تكرار متتالٍ</strong>يختلف الاسم الأول عن اسم الأب، ويختلف اسم الأب عن اسم الجد. يمكن أن يتطابق الاسم الأول مع اسم الجد.</p><p class="rule"><strong>كلمات النسب للعرض فقط</strong>تُختار بن أو ابن أو لا شيء بين الاسم واسم الأب، وبين اسم الأب واسم الجد. للنساء، تُستخدم بنت أو لا شيء عند اسم الأب. لا تُضاف أي كلمات قبل العائلة.</p></div><p class="pool-meta">تُختار الأسماء الأولى بالتساوي داخل كل قائمة. يزيد احتمال ظهور الغامدي والزهراني لتناسب التدريب في المنطقة الجنوبية، وتتوزّع النسبة المتبقية بالتساوي على بقية العائلات. هذه إعدادات تدريبية قابلة للتعديل، وليست إحصاءً رسمياً لشيوع الأسماء.</p></div>
+    </details>
+    <details class="details" id="variants-details"><summary>شاهد صيغ الاسم نفسه</summary><div class="details-body"><p class="variant-help">يتغيّر العرض فقط، وتبقى أجزاء الاسم واسم الكشف ثابتة. هذه صيغ الشخص المعروض في المثال أعلاه.</p><div class="variants-list" id="variants-list"></div></div></details>
+    <details class="details"><summary id="pool-summary">راجع قائمة الأسماء والعائلات</summary><div class="details-body"><div class="dictionary-tabs" id="dictionary-tabs" role="group" aria-label="اختر قائمة الأسماء"><button type="button" data-pool="male" aria-pressed="true">أسماء الرجال</button><button type="button" data-pool="female" aria-pressed="false">أسماء النساء</button><button type="button" data-pool="families" aria-pressed="false">العائلات</button></div><div class="dictionary" id="dictionary"></div></div></details>
+    <p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
+    <noscript><p class="notice">يرجى تفعيل جافاسكربت لتوليد الأسماء. تعمل هذه الصفحة محلياً دون الاتصال بأي خدمة.</p></noscript>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><span>تصميم وإعداد <strong>سامي ناصر الغامدي</strong></span><span>بيانات تدريبية مولّدة · تعمل محلياً دون خدمات خارجية</span></div></footer>
+  <dialog id="about-dialog" aria-labelledby="about-title"><h2 id="about-title">عن الأداة</h2><p>أداة لتدريب منسوبي شركة طويق للخدمات الأمنية على مطابقة الهويات مع تصاريح الدخول، خطوة بخطوة.</p><p>تصميم وإعداد<span class="credit-name">سامي ناصر الغامدي</span><span lang="en" dir="ltr">Sami Nasser Alghamdi</span></p><p>هذه المرحلة مخصّصة لمراجعة مولّد الأسماء. جميع الأسماء المعروضة مولّدة لأغراض التدريب، ولا تمثل سجلاً لأشخاص حقيقيين.</p><button class="primary" id="close-about">العودة إلى المعاينة</button></dialog>
+  <!--
+    Name pools: curated Saudi-oriented starter vocabulary, reviewed and extended locally.
+    Source reference: Saudi Arabia section of thm/uinames names.json (MIT).
+    https://github.com/thm/uinames/blob/master/names.json
+    MIT License — Copyright (c) 2019 Thom van der Weerd
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  -->
+  <script src="./src/shared/name-engine.js"></script>
+  <script>
+  (() => {
+    'use strict';
+    const $ = id => document.getElementById(id);
+    const {pools, familyProbabilities, normalize, createEngine} = NameEngine;
+    const engine = createEngine();
+    const genderLabel = gender => gender === 'female' ? 'أنثى' : 'ذكر';
+    let batch = [], sample;
+    function appendID(element, person, connectors) {
+      element.replaceChildren();
+      [person.firstName, connectors.first, person.fatherName, connectors.second, person.grandfatherName, person.familyName].forEach((text, index) => {
+        if (!text) return;
+        if (element.childNodes.length) element.append(' ');
+        const span = document.createElement('span');
+        if (index === 1 || index === 3) span.className = 'connector';
+        span.textContent = text;
+        element.append(span);
+      });
+    }
+    function showSample() {
+      sample = engine.generate();
+      appendID($('sample-id'), sample, engine.chooseConnectors(sample));
+      $('sample-ledger').textContent = sample.ledgerName;
+      const labels = ['الاسم الأول', 'اسم الأب', 'اسم الجد', 'العائلة'];
+      $('sample-parts').replaceChildren(...[sample.firstName, sample.fatherName, sample.grandfatherName, sample.familyName].map((name, index) => {
+        const item = document.createElement('span'); item.className = 'part';
+        const label = document.createElement('small'); label.textContent = labels[index];
+        item.append(label, name); return item;
+      }));
+      $('variants-list').replaceChildren(...engine.variants(sample).map(connectors => {const p = document.createElement('p');appendID(p, sample, connectors);return p;}));
+    }
+    function cell(label, className) {
+      const td = document.createElement('td'); td.className = className;
+      const caption = document.createElement('span'); caption.className = 'mobile-label'; caption.textContent = label;td.append(caption);return td;
+    }
+    function renderBatch() {
+      const gender = $('gender-filter').value;
+      const query = normalize($('name-search').value);
+      const visible = batch.filter(item => (gender === 'all' || item.person.gender === gender) && normalize(`${item.person.fullName} ${item.idName}`).includes(query));
+      const fragment = document.createDocumentFragment();
+      visible.forEach(item => {
+        const row = document.createElement('tr');
+        const number = document.createElement('td');number.className = 'row-number number';number.textContent = item.number;
+        const full = cell('الاسم الأساسي', 'base-cell base-name'); full.append(item.person.fullName);
+        const id = cell('على الهوية', 'id-cell');const idText = document.createElement('span');appendID(idText, item.person, item.connectors);id.append(idText);
+        const ledger = cell('في كشف تصاريح الدخول', 'ledger-cell ledger-name');ledger.append(item.person.ledgerName);
+        const gender = document.createElement('td');gender.className = 'gender-cell';const badge = document.createElement('span');badge.className = `gender ${item.person.gender}`;badge.textContent = genderLabel(item.person.gender);gender.append(badge);
+        row.append(number, full, id, ledger, gender);fragment.append(row);
+      });
+      $('names-body').replaceChildren(fragment);
+      $('empty-message').hidden = visible.length > 0;
+      $('visible-count').textContent = `عرض ${visible.length} من ${batch.length} اسم`;
+    }
+    function generateBatch(event) {
+      event?.preventDefault();
+      const size = Number($('batch-size').value);
+      batch = Array.from({length:size}, (_, index) => {const person = engine.generate();const connectors = engine.chooseConnectors(person);return {person, connectors, idName: engine.formatID(person, connectors), number: index + 1};});
+      const females = batch.filter(item => item.person.gender === 'female').length;
+      const stats = $('batch-stats');stats.replaceChildren();
+      [`إجمالي الدفعة: ${size}`, `رجال: ${size - females}`, `نساء: ${females}`].forEach(text => {const span = document.createElement('span');span.textContent = text;stats.append(span);});
+      const validation = document.createElement('span');validation.className = 'status';
+      const valid = batch.every(({person:p}) => normalize(p.firstName) !== normalize(p.fatherName) && normalize(p.fatherName) !== normalize(p.grandfatherName));
+      validation.textContent = valid ? '✓ لا يوجد تكرار متتالٍ' : 'يوجد تكرار يحتاج إلى المراجعة';stats.append(validation);
+      renderBatch();$('announcement').textContent = `تم توليد ${size} اسم: ${size - females} رجلاً و${females} امرأة.`;
+    }
+    function renderDictionary(key) {
+      $('dictionary').replaceChildren(...pools[key].map(name => {const span = document.createElement('span');span.textContent = name;return span;}));
+      document.querySelectorAll('[data-pool]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.pool === key)));
+    }
+    function downloadBatch() {
+      const quote = value => `"${String(value).replaceAll('"', '""')}"`;
+      const rows = [['الجنس','الاسم الأول','اسم الأب','اسم الجد','العائلة','الاسم الرباعي','اسم الهوية','اسم الكشف'], ...batch.map(({person:p,idName}) => [genderLabel(p.gender),p.firstName,p.fatherName,p.grandfatherName,p.familyName,p.fullName,idName,p.ledgerName])];
+      const blob = new Blob(['\uFEFF', rows.map(row => row.map(quote).join(',')).join('\r\n')], {type:'text/csv;charset=utf-8;'});
+      const url = URL.createObjectURL(blob);const link = document.createElement('a');link.href = url;link.download = 'tuwaiq-name-review.csv';document.body.append(link);link.click();link.remove();setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+    const darkPreference = matchMedia('(prefers-color-scheme: dark)');
+    function isDark() {return document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : darkPreference.matches;}
+    function updateThemeLabel() {const dark = isDark();$('theme-button').setAttribute('aria-label', dark ? 'تفعيل الوضع الفاتح' : 'تفعيل الوضع الداكن');$('theme-button').innerHTML = dark ? '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>' : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 13.2A9 9 0 0 1 10.8 3.3a9 9 0 1 0 9.9 9.9Z"/></svg>';}
+    $('theme-button').addEventListener('click', () => {const theme = isDark() ? 'light' : 'dark';document.documentElement.dataset.theme = theme;try {localStorage.setItem('tuwaiq-theme', theme);}catch {}updateThemeLabel();});
+    darkPreference.addEventListener('change', updateThemeLabel);
+    $('generate-form').addEventListener('submit', generateBatch);
+    $('name-search').addEventListener('input', renderBatch);
+    $('gender-filter').addEventListener('change', renderBatch);
+    $('sample-button').addEventListener('click', () => {showSample();$('announcement').textContent = 'تم عرض مثال جديد.';});
+    $('download-button').addEventListener('click', downloadBatch);
+    $('about-button').addEventListener('click', () => $('about-dialog').showModal());
+    $('close-about').addEventListener('click', () => $('about-dialog').close());
+    $('dictionary-tabs').addEventListener('click', event => {const button = event.target.closest('[data-pool]');if(button)renderDictionary(button.dataset.pool);});
+    $('pool-summary').textContent = `راجع القوائم · ${pools.male.length} اسم رجل، ${pools.female.length} اسم امرأة، ${pools.families.length} عائلة`;
+    const regionalShare = Object.values(familyProbabilities).reduce((sum, probability) => sum + probability, 0);
+    const regionalText = Object.entries(familyProbabilities).map(([name, probability]) => `${name} ${Math.round(probability * 100)}%`).join(' · ');
+    $('regional-probabilities').textContent = `توزيع العائلات للتدريب: ${regionalText} · بقية العائلات ${Math.round((1 - regionalShare) * 100)}%.`;
+    updateThemeLabel();showSample();generateBatch();renderDictionary('male');
+  })();
+  </script>
+</body>
+</html>

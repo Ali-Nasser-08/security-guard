@@ -1,0 +1,14 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "path": "assets/portraits/male-blurred.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: small fictional portrait for an offline Saudi security-guard training ID-card mockup. Generate a single monochrome frontal passport-style head-and-shoulders portrait of a fictional Saudi man about 35 years old, wearing a plain white thobe, white ghutra and black agal, against a clean light gray background. Crop as a vertical passport photograph, centered head, shoulders visible. Make the face deliberately strongly Gaussian-blurred and unrecognizable, while the outline of clothing and headdress remains readable. Neutral flat photographic lighting, realistic grayscale photographic texture. The blur is part of the delivered image. No text, no card, no badge, no logos, no watermark. This is a synthetic training person, not a real individual."
+    },
+    {
+      "path": "assets/portraits/female-blurred.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: small fictional portrait for an offline Saudi security-guard training ID-card mockup. Generate a single monochrome frontal passport-style head-and-shoulders portrait of a fictional Saudi woman about 32 years old, wearing a plain dark hijab and abaya, against a clean light gray background. Crop as a vertical passport photograph, centered head, shoulders visible. Make the face deliberately strongly Gaussian-blurred and unrecognizable, while the outline of clothing and headscarf remains readable. Neutral flat photographic lighting, realistic grayscale photographic texture. The blur is part of the delivered image. No text, no card, no badge, no logos, no watermark. This is a synthetic training person, not a real individual."
+    }
+  ],
+  "runtimeAssets": "400 px JPEG copies embedded in portrait-data.js for local-file/offline compatibility. Original generated PNGs retained."
+}

@@ -1,0 +1,14 @@
+dist/
+artifacts/
+resources/
+.vercel/
+.agents/
+.codex/
+node_modules/
+*.log
+.DS_Store
+assets/portraits/*.png
+assets/portraits/*.jpg
+font/IBM_Plex_Sans_Arabic/*.ttf
+!font/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.ttf
+!font/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Medium.ttf
